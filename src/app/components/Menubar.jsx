@@ -8,10 +8,10 @@ export default function Menubar() {
             <Link href='/'>Home</Link>
           </li>
           <li>
-            <a href='https://https://exam1part1.vercel.app/' target='_blank'>Midterm Part I - Expense</a>
+            <a href='https://https://https://exam-1-green.vercel.app/' target='_blank'>Midterm Part I - Expense</a>
           </li>
           <li>
-            <a href='https://exam-1-part2.vercel.app/' target='_blank'>Midterm Part II Site</a>
+            <a href='https://https://exam-1-part-2.vercel.app/' target='_blank'>Midterm Part II Site</a>
           </li>
           <li>
             <Link href='/faq'>FAQ</Link>
