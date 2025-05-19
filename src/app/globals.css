@@ -1,3 +1,6 @@
+/* global.css */
+
+/* 1. Your existing CSS-variable setup */
 @import "tailwindcss";
 
 :root {
@@ -19,8 +22,56 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 2. Tailwind’s core layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Base layer—tie Tailwind to your CSS vars */
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-sans m-0 p-0;
+  }
 }
+
+/* 4. Component layer—apply your custom classes */
+@layer components {
+  header {
+    @apply bg-purple-600 text-white p-6 text-center;
+  }
+  header nav ul {
+    @apply list-none p-0 m-0;
+  }
+  header nav ul li {
+    @apply inline mx-4;
+  }
+  header nav ul li a {
+    @apply text-white no-underline hover:underline;
+  }
+  .section {
+    @apply px-8 py-12 text-center;
+  }
+  .product-container {
+    @apply flex flex-wrap justify-center gap-6;
+  }
+  .product-card {
+    @apply w-48 p-4 bg-white shadow-lg rounded-2xl;
+  }
+  .product-card img {
+    @apply w-full rounded-lg;
+  }
+  form {
+    @apply max-w-md mx-auto flex flex-col space-y-4;
+  }
+  input,
+  textarea {
+    @apply p-4 border-2 border-gray-300 rounded-lg;
+  }
+  button {
+    @apply px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700;
+  }
+  footer {
+    @apply bg-pink-200 p-6 text-center;
+  }
+}
+
